@@ -1,0 +1,10 @@
+Changes
+MANIFEST
+Makefile.PL
+MegaHAL.xs
+README
+lib/AI/MegaHAL.pm
+libmegahal.c
+megahal.h
+megahal.trn
+test.pl

@@ -1,0 +1,18 @@
+Revision history for the Perl MegaHAL extension.
+
+0.04  Thu Jan 22 21:09:18 PST 2004
+	- Moved from MegaHAL -> AI::MegaHAL namespace
+	- Included sources from the MegaHAL distribution - should no longer
+	  have to download and install as a separate shared library.
+
+0.03  Sat Feb  3 17:01:32 2001
+	- Minor fix for a warning that I apparently didn't notice in 0.02
+          (Still involving the 'our' reserved word.)
+
+0.02  Thu Jan 25 10:19:23 2001
+	- Fixed a bug in MegaHAL.pm which prevented compilation under 
+	  perl 5.005_03.  (As reported by Mark Symonds.)
+
+0.01  Thu Nov 16 20:29:21 2000
+	- Original version.
+
