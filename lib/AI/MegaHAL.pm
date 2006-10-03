@@ -24,7 +24,7 @@ use vars qw(@EXPORT @ISA $VERSION $AUTOLOAD);
 	     megahal_cleanup);
 
 @ISA = qw(Exporter DynaLoader);
-$VERSION = '0.04';
+$VERSION = '0.04_01';
 
 sub AUTOLOAD {
     # This AUTOLOAD is used to 'autoload' constants from the constant()
@@ -189,8 +189,10 @@ None known at this time.
 
 =head1 AUTHOR
 
-The Perl AI::MegaHAL interface was written by Cory Spencer <cspencer@sprocket.org>
+The Perl AI::MegaHAL interface was written by Cory Spencer <cspencer[at]sprocket.org>.
 
-MegaHAL was originally written by and is copyright Jason Hutchens <hutch@ciips.ee.uwa.edu.au>
+Now maintained by Alexandr Ciornii <alexchorny[at]gmail.com>.
+
+MegaHAL was originally written by and is copyright Jason Hutchens <hutch[at]ciips.ee.uwa.edu.au>
 
 =cut

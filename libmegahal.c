@@ -101,9 +101,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
+#ifndef _MSC_VER
 #include <unistd.h>
 #include <getopt.h>
-#if !defined(AMIGA) && !defined(__mac_os)
+#endif
+#if !defined(AMIGA) && !defined(__mac_os) && !defined (__FreeBSD__)
+// FreeBSD malloc.h is empty and gives error
+// Tested on FreeBSD 5.4
 #include <malloc.h>
 #endif
 #include <string.h>
@@ -317,6 +321,11 @@ static void write_input(char *);
 static void write_output(char *);
 #if defined(DOS) || defined(__mac_os)
 static void usleep(int);
+#endif
+
+#if defined(_MSC_VER) || defined(__MINGW32_VERSION)
+#include <windows.h>
+#define usleep(i) Sleep(i)
 #endif
 
 
@@ -2922,14 +2931,14 @@ int rnd(int range)
     static bool flag=FALSE;
 
     if(flag==FALSE) {
-#if defined(__mac_os) || defined(DOS)
+#if defined(DOS) || defined(__mac_os) || defined(_MSC_VER) || defined(__MINGW32_VERSION)
 	srand(time(NULL));
 #else
 	srand48(time(NULL));
 #endif
     }
     flag=TRUE;
-#if defined(__mac_os) || defined(DOS)
+#if defined(DOS) || defined(__mac_os) || defined(_MSC_VER) || defined(__MINGW32_VERSION)
     return(rand()%range);
 #else
     return(floor(drand48()*(double)(range)));

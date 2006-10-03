@@ -1,5 +1,14 @@
 Revision history for the Perl MegaHAL extension.
 
+0.04_01   Oct 03 2006
+new maintainer: Alexandr Ciornii
+        - Integrated my patch to compile under Mingw and MSVC
+        - Submitted patch for C library.
+          See https://alioth.debian.org/tracker/index.php?func=detail&aid=303914&group_id=30393&atid=410992
+        - License (GPL from C library)
+        - META.yml
+        - Fix compilation error under FreeBSD. Tested on FreeBSD 5.4.
+
 0.04  Thu Jan 22 21:09:18 PST 2004
 	- Moved from MegaHAL -> AI::MegaHAL namespace
 	- Included sources from the MegaHAL distribution - should no longer

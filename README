@@ -1,4 +1,4 @@
-AI::MegaHAL version 0.04
+AI::MegaHAL version 0.04_01
 ===========================
 
 TABLE OF CONTENTS
@@ -10,6 +10,7 @@ TABLE OF CONTENTS
 4) BUGS
 5) AUTHOR INFORMATION
 6) ACKNOWLEDGEMENTS
+7) TESTING
 
 
 1) DESCRIPTION
@@ -22,7 +23,12 @@ Hutchens.
 AI::MegaHAL is based on the 9.1.0 release of MegaHAL, which can been downloaed
 from the following URL:
 
-  http://megahal.sourceforge.net/
+  http://www.sourceforge.net/projects/megahal/
+  (previous:
+   http://megahal.alioth.debian.org/
+   http://megahal.sourceforge.net/
+  )
+
 
 To read about the latest features, see the Changes file.
 
@@ -67,13 +73,14 @@ and information you can provide, the better.
 5) AUTHOR INFORMATION
 ---------------------
 
-The Perl AI::MegaHAL module was written by Cory Spencer <cspencer@sprocket.org>
+The Perl AI::MegaHAL module was written by Cory Spencer <cspencer[at]sprocket.org>
+Now maintained by Alexandr Ciornii <alexchorny[at]gmail.com>
 
 Any questions related to the underlying MegaHAL C interface should be directed 
 to the current maintainers of the package.  Contact addresses are provided on
 the MegaHAL SourceForge homepage at:
 
-  http://megahal.sourceforge.net/
+  http://www.sourceforge.net/projects/megahal/
 
 
 6) ACKNOWLEDGEMENTS
@@ -82,4 +89,10 @@ the MegaHAL SourceForge homepage at:
 Thanks go to the dot com with whom I was a former employee of at the time this
 module was written.  Without the long hours spent in a confined office space,
 I would have never undertaken this project to help maintain my sanity.
+
+7) TESTING
+-------------------
+
+This module was tested on MSVC, Mingw, FreeBSD 5.4.
+Don't have access to Solaris, so cannot fix strange smoke report.
 

@@ -5,5 +5,8 @@ WriteMakefile('NAME'          => 'AI::MegaHAL',
 	      'VERSION_FROM'  => 'lib/AI/MegaHAL.pm',
 	      ($] >= 5.005 ?
 	       (ABSTRACT_FROM => 'lib/AI/MegaHAL.pm',
-		AUTHOR        => 'Cory Spencer <cspencer@sprocket.org>') : ()),
-	      'OBJECT'        => 'MegaHAL.o libmegahal.o');
+		AUTHOR        => 'Alexandr Ciornii <alexchorny'.'@gmail.com>') : ()),
+    ($ExtUtils::MakeMaker::VERSION ge '6.30_00'? 
+     ('LICENSE'		=> 'GPL', ) : ()),
+	      'OBJECT'        => 'MegaHAL.o libmegahal.o'
+	      );

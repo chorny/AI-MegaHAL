@@ -8,3 +8,4 @@ libmegahal.c
 megahal.h
 megahal.trn
 test.pl
+META.yml                                 Module meta-data (added by MakeMaker)
