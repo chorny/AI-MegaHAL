@@ -103,7 +103,7 @@
 #include <stdarg.h>
 #ifndef _MSC_VER
 #include <unistd.h>
-#include <getopt.h>
+//#include <getopt.h>
 #endif
 #if !defined(AMIGA) && !defined(__mac_os) && !defined (__FreeBSD__)
 // FreeBSD malloc.h is empty and gives error

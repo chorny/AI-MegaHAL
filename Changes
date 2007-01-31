@@ -1,5 +1,8 @@
 Revision history for the Perl MegaHAL extension.
 
+0.04_02   Jan 31 2007
+        - Removed inclusion of <getopt.h> in libmegahal.c
+
 0.04_01   Oct 03 2006
 new maintainer: Alexandr Ciornii
         - Integrated my patch to compile under Mingw and MSVC
