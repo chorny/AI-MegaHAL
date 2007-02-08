@@ -1,12 +1,13 @@
 --- #YAML:1.0
 name:                AI-MegaHAL
-version:             0.04_02
+version:             0.05
 abstract:            Perl interface to the MegaHAL natural language conversation simulator.
 license:             GPL
-generated_by:        ExtUtils::MakeMaker version 6.30_04
-author:              Alexandr Ciornii <alexchorny@gmail.com>
+generated_by:        ExtUtils::MakeMaker version 6.31
 distribution_type:   module
 requires:     
 meta-spec:
-    url: http://module-build.sourceforge.net/META-spec-new.html
-    version: 1.1
+    url:     http://module-build.sourceforge.net/META-spec-v1.2.html
+    version: 1.2
+author:
+    - Alexandr Ciornii <alexchorny@gmail.com>

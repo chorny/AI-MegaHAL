@@ -1,5 +1,6 @@
 Revision history for the Perl MegaHAL extension.
 
+0.05 = 0.04_02 Feb 08 2007
 0.04_02   Jan 31 2007
         - Removed inclusion of <getopt.h> in libmegahal.c
 

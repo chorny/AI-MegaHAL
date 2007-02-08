@@ -1,4 +1,4 @@
-AI::MegaHAL version 0.04_02
+AI::MegaHAL version 0.05
 ===========================
 
 TABLE OF CONTENTS
@@ -93,6 +93,5 @@ I would have never undertaken this project to help maintain my sanity.
 7) TESTING
 -------------------
 
-This module was tested on MSVC, Mingw, FreeBSD 5.4.
+This module was tested on MSVC, Mingw, FreeBSD 5.4, RedHat Linux.
 Don't have access to Solaris, so cannot fix strange smoke report.
-
