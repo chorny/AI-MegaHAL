@@ -24,7 +24,7 @@ use vars qw(@EXPORT @ISA $VERSION $AUTOLOAD);
 	     megahal_cleanup);
 
 @ISA = qw(Exporter DynaLoader);
-$VERSION = '0.05';
+$VERSION = '0.05_01';
 
 sub AUTOLOAD {
     # This AUTOLOAD is used to 'autoload' constants from the constant()
@@ -174,10 +174,13 @@ Creates a new AI::MegaHAL object.  The object constructor can optionaly receive 
 
 =head1 METHODS
 
+=head2 initial_greeting
+
 $text = $megahal->initial_greeting();
 
 Returns a string containing the initial greeting which is created by MegaHAL at startup.
 
+=head2 do_reply
 
 $text = $megahal->do_reply($message);
 

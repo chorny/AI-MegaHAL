@@ -602,8 +602,8 @@ void megahal_cleanup(void)
  */
 COMMAND_WORDS execute_command(DICTIONARY *words, int *position)
 {
-    register int i;
-    register int j;
+    unsigned int i;
+    unsigned int j;
 
     /*
      *		If there is only one word, then it can't be a command.
@@ -912,7 +912,7 @@ void write_output(char *output)
  */
 void capitalize(char *string)
 {
-    register int i;
+    unsigned int i;
     bool start=TRUE;
 
     for(i=0; i<(int)strlen(string); ++i) {
@@ -935,7 +935,7 @@ void capitalize(char *string)
  */
 void upper(char *string)
 {
-    register int i;
+    unsigned int i;
 
     for(i=0; i<(int)strlen(string); ++i) string[i]=(char)toupper((int)string[i]);
 }
@@ -974,7 +974,7 @@ void write_input(char *input)
 static char *format_output(char *output)
 {
     static char *formatted=NULL;
-    register int i,j,c;
+    unsigned int i,j,c;
     int l;
     if(formatted==NULL) {
 	formatted=(char *)malloc(sizeof(char));
@@ -1027,7 +1027,7 @@ static char *format_output(char *output)
  */
 BYTE2 add_word(DICTIONARY *dictionary, STRING word)
 {
-    register int i;
+    unsigned int i;
     int position;
     bool found;
 
@@ -1205,8 +1205,8 @@ BYTE2 find_word(DICTIONARY *dictionary, STRING word)
  */
 int wordcmp(STRING word1, STRING word2)
 {
-    register int i;
-    int bound;
+    unsigned int i;
+    unsigned int bound;
 
     bound=MIN(word1.length,word2.length);
 
@@ -1267,7 +1267,7 @@ void free_model(MODEL *model)
 void free_tree(TREE *tree)
 {
     static int level=0;
-    register int i;
+    unsigned int i;
 
     if(tree==NULL) return;
 
@@ -1334,7 +1334,7 @@ DICTIONARY *new_dictionary(void)
  */
 void save_dictionary(FILE *file, DICTIONARY *dictionary)
 {
-    register int i;
+    unsigned int i;
 
     fwrite(&(dictionary->size), sizeof(BYTE4), 1, file);
     progress("Saving dictionary", 0, 1);
@@ -1354,7 +1354,7 @@ void save_dictionary(FILE *file, DICTIONARY *dictionary)
  */
 void load_dictionary(FILE *file, DICTIONARY *dictionary)
 {
-    register int i;
+    unsigned int i;
     int size;
 
     fread(&size, sizeof(BYTE4), 1, file);
@@ -1375,7 +1375,7 @@ void load_dictionary(FILE *file, DICTIONARY *dictionary)
  */
 void save_word(FILE *file, STRING word)
 {
-    register int i;
+    unsigned int i;
 
     fwrite(&(word.length), sizeof(BYTE1), 1, file);
     for(i=0; i<word.length; ++i)
@@ -1391,7 +1391,7 @@ void save_word(FILE *file, STRING word)
  */
 void load_word(FILE *file, DICTIONARY *dictionary)
 {
-    register int i;
+    unsigned int i;
     STRING word;
 
     fread(&(word.length), sizeof(BYTE1), 1, file);
@@ -1487,7 +1487,7 @@ fail:
  */
 void update_model(MODEL *model, int symbol)
 {
-    register int i;
+    unsigned int i;
 
     /*
      *		Update all of the models in the current context with the specified
@@ -1509,7 +1509,7 @@ void update_model(MODEL *model, int symbol)
  */
 void update_context(MODEL *model, int symbol)
 {
-    register int i;
+    unsigned int i;
 
     for(i=(model->order+1); i>0; --i)
 	if(model->context[i-1]!=NULL)
@@ -3316,7 +3316,7 @@ void change_personality(DICTIONARY *command, int position, MODEL **model)
 
 void free_words(DICTIONARY *words)
 {
-    register int i;
+    unsigned int i;
 
     if(words == NULL) return;
 

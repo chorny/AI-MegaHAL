@@ -8,5 +8,8 @@ WriteMakefile('NAME'          => 'AI::MegaHAL',
 		AUTHOR        => 'Alexandr Ciornii <alexchorny'.'@gmail.com>') : ()),
     ($ExtUtils::MakeMaker::VERSION ge '6.30_00'? 
      ('LICENSE'		=> 'GPL', ) : ()),
-	      'OBJECT'        => 'MegaHAL.o libmegahal.o'
+	      'OBJECT'        => 'MegaHAL.o libmegahal.o',
+              PREREQ_PM    => {
+                     'Test::More'      => '0.47',
+                    }
 	      );

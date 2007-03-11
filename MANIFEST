@@ -7,5 +7,6 @@ lib/AI/MegaHAL.pm
 libmegahal.c
 megahal.h
 megahal.trn
-test.pl
+t/pod.t
+t/test.t
 META.yml                                 Module meta-data (added by MakeMaker)

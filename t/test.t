@@ -21,20 +21,20 @@ print("Creating new AI::MegaHAL\n");
 my $megahal = new AI::MegaHAL(AutoSave => 1);
 ok(ref($megahal) ne "", 1);
 
-print("Testing AI::MegaHAL->do_reply method\n");
+print("#Testing AI::MegaHAL->do_reply method\n");
 
-my $query = "We are the knights who say NI!";
-print(" * Sending: $query\n");
+my $query = "#We are the knights who say NI!";
+print("# * Sending: $query\n");
 my $reply = $megahal->do_reply($query);
-print(" * Replied: $reply\n");
+print("# * Replied: $reply\n");
 ok($reply ne "", 1);
 
-print("Destroying MegaHAL - should autosave brain and dictionary files\n");
+print("#Destroying MegaHAL - should autosave brain and dictionary files\n");
 $megahal = undef;
 ok(1);
 
-print("Checking for brain file: megahal.brn\n");
+print("#Checking for brain file: megahal.brn\n");
 ok(-f 'megahal.brn', 1);
 
-print("Checking for dictionary file: megahal.dic\n");
+print("#Checking for dictionary file: megahal.dic\n");
 ok(-f 'megahal.dic', 1);
