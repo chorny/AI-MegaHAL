@@ -1,4 +1,4 @@
-AI::MegaHAL version 0.05_01
+AI::MegaHAL version 0.06
 ===========================
 
 TABLE OF CONTENTS
@@ -94,4 +94,4 @@ I would have never undertaken this project to help maintain my sanity.
 -------------------
 
 This module was tested on MSVC, Mingw, FreeBSD 5.4, RedHat Linux.
-Don't have access to Solaris, so cannot fix strange smoke report.
+See http://cpantesters.perl.org/show/AI-MegaHAL.html for more.

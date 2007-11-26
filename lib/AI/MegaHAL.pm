@@ -24,7 +24,7 @@ use vars qw(@EXPORT @ISA $VERSION $AUTOLOAD);
 	     megahal_cleanup);
 
 @ISA = qw(Exporter DynaLoader);
-$VERSION = '0.05_01';
+$VERSION = '0.06';
 
 sub AUTOLOAD {
     # This AUTOLOAD is used to 'autoload' constants from the constant()
