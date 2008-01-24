@@ -19,6 +19,14 @@
  *  675 Mass Ave, Cambridge, MA 02139, USA.
  */
 
+/* Modified version
+Alexandr Ciornii
+  Win32 (MSVC & gcc), FreeBSD, Mac Darwin compatibility
+  const'ing function parameters
+Craig Andrews
+  void megahal_learn
+*/
+
 /*===========================================================================*/
 
 /*
@@ -105,7 +113,7 @@
 #include <unistd.h>
 //#include <getopt.h>
 #endif
-#if !defined(AMIGA) && !defined(__mac_os) && !defined (__FreeBSD__)
+#if !defined(AMIGA) && !defined(__mac_os) && !defined(__FreeBSD__) && !defined(__APPLE__)
 // FreeBSD malloc.h is empty and gives error
 // Tested on FreeBSD 5.4
 #include <malloc.h>
@@ -467,6 +475,26 @@ char *megahal_do_reply(char *input, int log)
     output = generate_reply(model, words);
     capitalize(output);
     return output;
+}
+
+/*
+   megahal_learn --
+
+   Take string as input and and learn with no output.
+
+  */
+
+void megahal_learn(char *input, int log)
+{
+
+    if (log != 0)
+	write_input(input);  /* log input if so desired */
+
+    upper(input);
+
+    make_words(input, words);
+
+    learn(model, words);
 }
 
 /*

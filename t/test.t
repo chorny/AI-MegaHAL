@@ -18,7 +18,7 @@ ok(1); # If we made it this far, we're ok.
 # its man page ( perldoc Test ) for help writing this test script.
 
 print("Creating new AI::MegaHAL\n");
-my $megahal = new AI::MegaHAL(AutoSave => 1);
+my $megahal = AI::MegaHAL->new(AutoSave => 1);
 ok(ref($megahal) ne "", 1);
 
 print("#Testing AI::MegaHAL->do_reply method\n");

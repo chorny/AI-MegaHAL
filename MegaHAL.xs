@@ -125,6 +125,11 @@ megahal_do_reply(input,log)
         int     log
 
 void
+megahal_learn(input,log)
+        char*   input
+        int     log
+
+void
 megahal_output(output)
         char*   output
 

@@ -19,12 +19,13 @@ use vars qw(@EXPORT @ISA $VERSION $AUTOLOAD);
 	     megahal_initial_greeting
 	     megahal_command
 	     megahal_do_reply
+	     megahal_learn
 	     megahal_output
 	     megahal_input
 	     megahal_cleanup);
 
 @ISA = qw(Exporter DynaLoader);
-$VERSION = '0.06';
+$VERSION = '0.06_01';
 
 sub AUTOLOAD {
     # This AUTOLOAD is used to 'autoload' constants from the constant()
@@ -100,6 +101,12 @@ sub do_reply() {
     return megahal_do_reply($text,0);
 }
 
+sub learn() {
+    my ($self,$text) = @_;
+
+    return megahal_learn($text,0);
+}
+
 sub _initialize() {
     my $self = shift;
 
@@ -134,15 +141,17 @@ AI::MegaHAL - Perl interface to the MegaHAL natural language conversation simula
 
 use AI::MegaHAL;
 
-$megahal = AI::new MegaHAL('Path'     => './',
+my $megahal = AI::MegaHAL->new('Path'     => './',
                            'Banner'   => 0,
                            'Prompt'   => 0,
                            'Wrap'     => 0,
                            'AutoSave' => 0);
 
-$text = $megahal->initial_greeting();
+my $text = $megahal->initial_greeting();
 
 $text = $megahal->do_reply($message);
+
+$megahal->learn($message);
 
 =head1 DESCRIPTION
 
@@ -152,7 +161,7 @@ This package provides a Perl interface to the MegaHAL conversation simulator wri
 
 =head1 CONSTRUCTOR
 
-$megahal = new AI::MegaHAL('Path'     => './',
+$megahal = AI::MegaHAL->new('Path'     => './',
                            'Banner'   => 0,
                            'Prompt'   => 0,
                            'Wrap'     => 0,
@@ -186,9 +195,20 @@ $text = $megahal->do_reply($message);
 
 Generates reply $text to a given message $message.
 
+=head2 learn
+
+$megahal->learn($message);
+
+Learns from $message without generating a response
+
 =head1 BUGS
 
 None known at this time.
+
+=head1 SEE ALSO
+
+POE::Component::AI::MegaHAL - IRC bot,
+L<http://teaandbiscuits.org.uk/drupal/node/65> - Irssi IRC bot
 
 =head1 AUTHOR
 
