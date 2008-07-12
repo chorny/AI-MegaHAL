@@ -6,8 +6,8 @@ WriteMakefile('NAME'          => 'AI::MegaHAL',
 	      ($] >= 5.005 ?
 	       (ABSTRACT_FROM => 'lib/AI/MegaHAL.pm',
 		AUTHOR        => 'Alexandr Ciornii <alexchorny'.'@gmail.com>') : ()),
-    ($ExtUtils::MakeMaker::VERSION gt '6.30'? 
-     ('LICENSE'		=> 'GPL', ) : ()),
+    ($ExtUtils::MakeMaker::VERSION ge '6.31'? 
+     ('LICENSE'		=> 'gpl', ) : ()),
 	      'OBJECT'        => 'MegaHAL.o libmegahal.o',
               PREREQ_PM    => {
                      'Test::More'      => '0.47',

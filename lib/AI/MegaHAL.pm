@@ -25,7 +25,7 @@ use vars qw(@EXPORT @ISA $VERSION $AUTOLOAD);
 	     megahal_cleanup);
 
 @ISA = qw(Exporter DynaLoader);
-$VERSION = '0.06_01';
+$VERSION = '0.07';
 
 sub AUTOLOAD {
     # This AUTOLOAD is used to 'autoload' constants from the constant()
@@ -89,25 +89,25 @@ sub new {
     return $self;
 }
 
-sub initial_greeting() {
+sub initial_greeting {
     my $self = shift;
 
     return megahal_initial_greeting();
 }
 
-sub do_reply() {
+sub do_reply {
     my ($self,$text) = @_;
 
     return megahal_do_reply($text,0);
 }
 
-sub learn() {
+sub learn {
     my ($self,$text) = @_;
 
     return megahal_learn($text,0);
 }
 
-sub _initialize() {
+sub _initialize {
     my $self = shift;
 
     megahal_initialize();
