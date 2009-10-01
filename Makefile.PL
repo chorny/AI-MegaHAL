@@ -10,6 +10,8 @@ WriteMakefile1('NAME'          => 'AI::MegaHAL',
      ('LICENSE'		=> 'gpl', ) : ()),
 	      'OBJECT'        => 'MegaHAL.o libmegahal.o',
               PREREQ_PM    => {
+                    }
+              BUILD_REQUIRES    => {
                      'Test::More'      => '0.47',
                     }
 	      );
