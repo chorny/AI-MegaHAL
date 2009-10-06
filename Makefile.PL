@@ -17,7 +17,7 @@ WriteMakefile1('NAME'          => 'AI::MegaHAL',
 	      );
 
 
-sub WriteMakefile1 {
+sub WriteMakefile1 {  #Written by Alexandr Ciornii
         my %params=@_;
         my $eumm_version=$ExtUtils::MakeMaker::VERSION;
         $eumm_version=eval $eumm_version;
@@ -37,5 +37,7 @@ sub WriteMakefile1 {
         delete $params{LICENSE} if $eumm_version < 6.31;
         delete $params{AUTHOR} if $] < 5.005;
         delete $params{ABSTRACT_FROM} if $] < 5.005;
+        delete $params{BINARY_LOCATION} if $] < 5.005;
+        
         WriteMakefile(%params);
 }
