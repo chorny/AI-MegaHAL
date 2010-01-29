@@ -208,7 +208,10 @@ None known at this time.
 =head1 SEE ALSO
 
 POE::Component::AI::MegaHAL - IRC bot,
-L<http://teaandbiscuits.org.uk/drupal/node/65> - Irssi IRC bot
+
+L<http://teaandbiscuits.org.uk/drupal/node/65> - Irssi IRC bot,
+
+L<Hailo> - A pluggable Markov engine analogous to MegaHAL  
 
 =head1 AUTHOR
 
