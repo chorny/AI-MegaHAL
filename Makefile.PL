@@ -6,6 +6,7 @@ WriteMakefile1(
     META_MERGE => {
         resources => {
             repository => 'http://github.com/chorny/AI-MegaHAL',
+            keywords => ['megahal','chat',].
         },
     },
     'NAME'          => 'AI::MegaHAL',
