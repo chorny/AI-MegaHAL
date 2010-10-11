@@ -151,7 +151,8 @@ Craig Andrews
 
 #define BYTE1 unsigned char
 #define BYTE2 unsigned short
-#define BYTE4 unsigned long
+
+#define BYTE4 unsigned int
 
 #ifdef __mac_os
 #define bool Boolean
