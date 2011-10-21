@@ -211,7 +211,7 @@ POE::Component::AI::MegaHAL - IRC bot,
 
 L<http://teaandbiscuits.org.uk/drupal/node/65> - Irssi IRC bot,
 
-L<Hailo> - A pluggable Markov engine analogous to MegaHAL  
+L<Hailo> - A pluggable Markov engine analogous to MegaHAL
 
 =head1 AUTHOR
 
