@@ -2960,14 +2960,14 @@ int rnd(int range)
     static bool flag=FALSE;
 
     if(flag==FALSE) {
-#if defined(DOS) || defined(__mac_os) || defined(_MSC_VER) || defined(__MINGW32_VERSION)
+#if defined(DOS) || defined(__mac_os) || defined(_MSC_VER) || defined(__MINGW32_VERSION) || defined(WIN32)
 	srand(time(NULL));
 #else
 	srand48(time(NULL));
 #endif
     }
     flag=TRUE;
-#if defined(DOS) || defined(__mac_os) || defined(_MSC_VER) || defined(__MINGW32_VERSION)
+#if defined(DOS) || defined(__mac_os) || defined(_MSC_VER) || defined(__MINGW32_VERSION) || defined(WIN32)
     return(rand()%range);
 #else
     return(floor(drand48()*(double)(range)));
