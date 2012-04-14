@@ -3367,13 +3367,13 @@ void free_word(STRING word)
  *		Revision 1.6  2002/10/16 04:32:53  davidw
  *		* megahal.c (change_personality): [ 541667 ] Added patch from Andrew
  *		  Burke to rework logic in change_personality.
- *		
+ *
  *		* megahal.c: Trailing white space cleanup.
- *		
+ *
  *		* python-interface.c: [ 546397 ] Change python include path to a more
  *		  recent version.  This should really be fixed by using some of
  *		  Python's build automation tools.
- *		
+ *
  *		Revision 1.5  2000/11/08 11:07:11  davidw
  *		Moved README to docs directory.
  *

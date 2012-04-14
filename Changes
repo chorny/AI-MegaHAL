@@ -41,7 +41,7 @@ new maintainer: Alexandr Ciornii
           (Still involving the 'our' reserved word.)
 
 0.02  Thu Jan 25 10:19:23 2001
-	- Fixed a bug in MegaHAL.pm which prevented compilation under 
+	- Fixed a bug in MegaHAL.pm which prevented compilation under
 	  perl 5.005_03.  (As reported by Mark Symonds.)
 
 0.01  Thu Nov 16 20:29:21 2000

@@ -84,7 +84,7 @@ not_there:
 }
 
 
-MODULE = AI::MegaHAL		PACKAGE = AI::MegaHAL		
+MODULE = AI::MegaHAL		PACKAGE = AI::MegaHAL
 PROTOTYPES: DISABLE
 
 double

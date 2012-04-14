@@ -18,7 +18,7 @@ TABLE OF CONTENTS
 
 AI::MegaHAL is a Perl package written by Cory Spencer, and provides bindings
 to the MegaHAL conversation simulator, which was originally written by Jason
-Hutchens.  
+Hutchens.
 
 AI::MegaHAL is based on the 9.1.0 release of MegaHAL with some modifications.
 
@@ -76,7 +76,7 @@ and information you can provide, the better.
 The Perl AI::MegaHAL module was written by Cory Spencer <cspencer[at]sprocket.org>
 Now maintained by Alexandr Ciornii <alexchorny[at]gmail.com>
 
-Any questions related to the underlying MegaHAL C interface should be directed 
+Any questions related to the underlying MegaHAL C interface should be directed
 to the current maintainers of the package.  Contact addresses are provided on
 the MegaHAL SourceForge homepage at:
 
