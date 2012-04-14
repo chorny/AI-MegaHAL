@@ -1,12 +1,12 @@
 Changes
 MANIFEST
+META.yml                                 Module meta-data (added by MakeMaker)
 Makefile.PL
 MegaHAL.xs
 README
 lib/AI/MegaHAL.pm
 libmegahal.c
 megahal.h
-megahal.trn
 t/pod.t
 t/test.t
-META.yml                                 Module meta-data (added by MakeMaker)
+megahal.trn

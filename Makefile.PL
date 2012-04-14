@@ -19,7 +19,7 @@ WriteMakefile1(
     },
     BUILD_REQUIRES    => {
         'Test::More'      => '0.47',
-    }
+    },
     $^O =~/win/i ? (
         dist => {
             TAR      => 'ptar',
