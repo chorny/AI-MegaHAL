@@ -1,5 +1,7 @@
 Revision history for the Perl MegaHAL extension.
 
+0.08 = 0.07_01 2015-04-12
+
 0.07_01   Apr 14 2012
         - mention Hailo.pm in docs
         - use 'unsigned int' as 32 bit data type
