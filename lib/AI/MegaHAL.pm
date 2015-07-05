@@ -139,19 +139,19 @@ AI::MegaHAL - Perl interface to the MegaHAL natural language conversation simula
 
 =head1 SYNOPSIS
 
-use AI::MegaHAL;
-
-my $megahal = AI::MegaHAL->new('Path'     => './',
-                           'Banner'   => 0,
-                           'Prompt'   => 0,
-                           'Wrap'     => 0,
-                           'AutoSave' => 0);
-
-my $text = $megahal->initial_greeting();
-
-$text = $megahal->do_reply($message);
-
-$megahal->learn($message);
+    use AI::MegaHAL;
+    
+    my $megahal = AI::MegaHAL->new('Path'     => './',
+                               'Banner'   => 0,
+                               'Prompt'   => 0,
+                               'Wrap'     => 0,
+                               'AutoSave' => 0);
+    
+    my $text = $megahal->initial_greeting();
+    
+    $text = $megahal->do_reply($message);
+    
+    $megahal->learn($message);
 
 =head1 DESCRIPTION
 
@@ -161,45 +161,53 @@ This package provides a Perl interface to the MegaHAL conversation simulator wri
 
 =head1 CONSTRUCTOR
 
-$megahal = AI::MegaHAL->new('Path'     => './',
-                           'Banner'   => 0,
-                           'Prompt'   => 0,
-                           'Wrap'     => 0,
-                           'AutoSave' => 0);
+    $megahal = AI::MegaHAL->new('Path'     => './',
+                               'Banner'   => 0,
+                               'Prompt'   => 0,
+                               'Wrap'     => 0,
+                               'AutoSave' => 0);
 
-Creates a new AI::MegaHAL object.  The object constructor can optionaly receive the following named parameters:
+Creates a new C<AI::MegaHAL> object.  The object constructor can optionaly receive the following named parameters:
 
 =over 4
 
-=item B<Path> - The path to MegaHALs brain or training file (megahal.brn and megahal.trn respectively).  If 'Path' is not specified the current working directory is assumed.
+=item C<Path> 
 
-=item B<Banner> - A flag which enables/disables the banner which is displayed when MegaHAL starts up.  The default is to disable the banner.
+The path to MegaHALs brain or training file (megahal.brn and megahal.trn respectively).  If 'Path' is not specified the current working directory is assumed.
 
-=item B<Prompt> - A flag which enables/disables the prompt. This flag is only useful when MegaHAL is run interactively and is disabled by default.
+=item C<Banner>
 
-=item B<Wrap> - A flag which enables/disables word wrapping of MegaHALs responses when the lines exceed 80 characters in length.  The default is to disable word wrapping.
+A flag which enables/disables the banner which is displayed when MegaHAL starts up.  The default is to disable the banner.
+
+=item C<Prompt> 
+
+A flag which enables/disables the prompt. This flag is only useful when MegaHAL is run interactively and is disabled by default.
+
+=item C<Wrap> 
+
+A flag which enables/disables word wrapping of MegaHALs responses when the lines exceed 80 characters in length.  The default is to disable word wrapping.
 
 =back
 
 =head1 METHODS
 
-=head2 initial_greeting
+=head2 C<initial_greeting>
 
-$text = $megahal->initial_greeting();
+ $text = $megahal->initial_greeting();
 
 Returns a string containing the initial greeting which is created by MegaHAL at startup.
 
-=head2 do_reply
+=head2 C<do_reply>
 
-$text = $megahal->do_reply($message);
+ $text = $megahal->do_reply($message);
 
-Generates reply $text to a given message $message.
+Generates reply C<$text> to a given message C<$message>.
 
-=head2 learn
+=head2 C<learn>
 
-$megahal->learn($message);
+ $megahal->learn($message);
 
-Learns from $message without generating a response
+Learns from C<$message> without generating a response
 
 =head1 BUGS
 
