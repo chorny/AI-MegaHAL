@@ -720,7 +720,7 @@ char *read_input(char *prompt)
     /*
      *		Display the prompt to the user.
      */
-    fprintf(stdout, prompt);
+    fputs(prompt, stdout);
     fflush(stdout);
 
     /*
@@ -743,7 +743,7 @@ char *read_input(char *prompt)
 	 */
 	if((char)(c)=='\n') {
 	    if(finish==TRUE) break;
-	    fprintf(stdout, prompt);
+	    fputs(prompt, stdout);
 	    fflush(stdout);
 	    finish=TRUE;
 	    c=32;
@@ -897,7 +897,7 @@ bool print_header(FILE *file)
 
     fprintf(file, "MegaHALv8\n");
     fprintf(file, "Copyright (C) 1998 Jason Hutchens\n");
-    fprintf(file, timestamp);
+    fputs(timestamp, file);
     fflush(file);
 
     return(TRUE);
@@ -2880,7 +2880,7 @@ void delay(char *string)
      *		Don't simulate typing if the feature is turned off
      */
     if(typing_delay==FALSE)	{
-	fprintf(stdout, string);
+	fputs(string, stdout);
 	return;
     }
 
