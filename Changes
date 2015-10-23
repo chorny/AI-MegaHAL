@@ -1,5 +1,9 @@
 Revision history for the Perl MegaHAL extension.
 
+0.08_01   Not yet released
+        - Fix for RT 107921 (format not a string literal and no format
+           arguments)
+
 0.08 = 0.07_01 2015-04-12
 
 0.07_01   Apr 14 2012
