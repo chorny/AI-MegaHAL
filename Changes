@@ -1,5 +1,8 @@
 Revision history for the Perl MegaHAL extension.
 
+0.08_01   Not yet released
+        - MIN_PERL_VERSION added to Makefile.PL
+
 0.08 = 0.07_01 2015-04-12
 
 0.07_01   Apr 14 2012

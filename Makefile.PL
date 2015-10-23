@@ -20,6 +20,7 @@ WriteMakefile1(
     BUILD_REQUIRES    => {
         'Test::More'      => '0.47',
     },
+    MIN_PERL_VERSION  => '5.005',
     $^O =~/win/i ? (
         dist => {
             TAR      => 'ptar',
