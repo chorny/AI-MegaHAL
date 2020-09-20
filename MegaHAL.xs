@@ -41,12 +41,6 @@ constant(char *name, int arg)
     case 'L':
 	break;
     case 'M':
-	if (strEQ(name, "MEGAHAL_H"))
-#ifdef MEGAHAL_H
-	    return MEGAHAL_H;
-#else
-	    goto not_there;
-#endif
 	break;
     case 'N':
 	break;
