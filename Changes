@@ -1,9 +1,9 @@
 Revision history for the Perl MegaHAL extension.
 
-0.08_01   Not yet released
+0.08_01   2020-09-21
         - Fix for RT 107921 (format not a string literal and no format
-           arguments)
-        - constant MEGAHAL_H in MegaHAL.xs is useless
+           arguments) by Pete Houston
+        - constant MEGAHAL_H in MegaHAL.xs is useless (clang error, RT#129576)
 
 0.08 = 0.07_01 2015-04-12
 
