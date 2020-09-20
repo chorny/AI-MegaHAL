@@ -20,6 +20,7 @@ WriteMakefile1(
             keywords => ['megahal','chat',],
         },
     },
+    MIN_PERL_VERSION  => '5.005',
     $^O =~/win/i ? (
         dist => {
             TAR      => 'ptar',
