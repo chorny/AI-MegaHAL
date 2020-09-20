@@ -1,5 +1,6 @@
 language: perl
-sudo: false
+git:
+  depth: false
 perl:
   - "5.14"
-  - "5.22"
+  - "5.30"
