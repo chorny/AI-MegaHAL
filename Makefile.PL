@@ -27,6 +27,11 @@ WriteMakefile1(
             TARFLAGS => '-c -C -f',
         },
     ) : (),
+	(-d 'xt' and $ENV{AUTOMATED_TESTING} || $ENV{RELEASE_TESTING} || $ENV{TRAVIS}) ? (
+		test => {
+			TESTS => 't/*.t xt/*.t',
+		},
+	) : (),
 );
 
 

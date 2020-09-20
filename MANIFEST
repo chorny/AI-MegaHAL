@@ -7,6 +7,5 @@ README
 lib/AI/MegaHAL.pm
 libmegahal.c
 megahal.h
-t/pod.t
 t/test.t
 megahal.trn
