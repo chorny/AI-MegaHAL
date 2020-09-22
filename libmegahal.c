@@ -113,7 +113,7 @@ Craig Andrews
 #include <unistd.h>
 //#include <getopt.h>
 #endif
-#if !defined(AMIGA) && !defined(__mac_os) && !defined(__FreeBSD__) && !defined(__APPLE__)
+#if !defined(AMIGA) && !defined(__mac_os) && !defined(__FreeBSD__) && !defined(__OpenBSD__) && !defined(__APPLE__)
 // FreeBSD malloc.h is empty and gives error
 // Tested on FreeBSD 5.4
 #include <malloc.h>
